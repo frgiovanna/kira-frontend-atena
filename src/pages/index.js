@@ -5,11 +5,12 @@ import Card from "../components/Card";
 import LinkList from "../components/LinkList";
 import ProfileHeader from "../components/ProfileHeader";
 import RegisterDialog from "../components/RegisterDialog";
+import RegisterText from "../components/RegisterText";
 
 export const Container = styled.div`
-  background-color: #ecf1f4;
   width: 400px;
-  height: 800px;
+  height: 100vh;
+  background-color: #ecf1f4;
   margin: auto;
 `;
 
@@ -25,6 +26,7 @@ export default function Home() {
     <Container>
       <div style={{ padding: 16 }}>
         <ProfileHeader />
+        <RegisterText />
         <Card />
         <LinkList />
         {!isLogged && (

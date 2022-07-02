@@ -12,7 +12,7 @@ export default function SimpleBottomNavigation() {
   const [value, setValue] = React.useState(2);
 
   return (
-    <Box sx={{ width: 400 , bottom: 0, position: 'relative'}}>
+    <Box sx={{ width: 400 , bottom: 0, position: 'fixed'}}>
       <BottomNavigation
         showLabels
         value={value}

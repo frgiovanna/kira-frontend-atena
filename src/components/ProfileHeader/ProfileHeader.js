@@ -9,7 +9,10 @@ export default function ProfileHeader() {
     <Styles.ProfileHeader>
       <Styles.Wrapper>
         <Styles.Icon>
-          <AccountCircleIcon style={{ color: "white" }} fontSize="large" />
+          <AccountCircleIcon
+            style={{ color: "white", cursor: "pointer" }}
+            fontSize="large"
+          />
         </Styles.Icon>
         <Styles.TextWrapper>
           <Typography variant="body2" color="text.secondary" lineHeight="16px">
@@ -19,7 +22,7 @@ export default function ProfileHeader() {
           </Typography>
         </Styles.TextWrapper>
       </Styles.Wrapper>
-      <MenuIcon fontSize="large" />
+      <MenuIcon fontSize="large" sx={{ cursor: "pointer" }} />
     </Styles.ProfileHeader>
   );
 }
