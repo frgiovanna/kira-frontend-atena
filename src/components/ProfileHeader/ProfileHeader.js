@@ -1,7 +1,7 @@
 import React from "react";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Menu, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import * as Styles from "./styles";
 
 export default function ProfileHeader() {

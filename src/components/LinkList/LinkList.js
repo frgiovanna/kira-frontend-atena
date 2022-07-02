@@ -3,7 +3,6 @@ import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import ForumIcon from "@mui/icons-material/Forum";
 import AddCircleRoundedIcon from "@mui/icons-material/AddCircleRounded";
-import { Typography } from "@mui/material";
 import * as Styles from "./styles";
 
 export default function LinkList() {
