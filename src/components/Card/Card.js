@@ -10,11 +10,12 @@ export default function Card() {
         <CalendarMonthIcon />
         <Typography variant="h6">calendário menstrual</Typography>
       </Styles.TitleWrapper>
-      <p>
-        insira os dados do seu ciclo menstrual
-        <br />
-        para acompanhar todos os detalhes!
-      </p>
+      <Typography paddingY='16px' variant='body2'>
+          insira os dados do seu ciclo menstrual
+          <br />
+          para acompanhar todos os detalhes!
+      </Typography>
+
       <Styles.Button href="/periodcalendar">criar meu calendário</Styles.Button>
     </Styles.Card>
   );
