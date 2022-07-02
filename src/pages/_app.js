@@ -1,7 +1,7 @@
 import * as React from "react";
 import "../../styles/globals.css";
+import styled from "styled-components";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { green, orange } from "@mui/material/colors";
 
 const theme = createTheme({
   palette: {
@@ -14,10 +14,19 @@ const theme = createTheme({
   },
 });
 
+export const Container = styled.div`
+  width: 400px;
+  background-color: #ecf1f4;
+  margin: auto;
+  margin-bottom: 50px;
+`;
+
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
+      <Container>
+        <Component {...pageProps} />
+      </Container>
     </ThemeProvider>
   );
 }
