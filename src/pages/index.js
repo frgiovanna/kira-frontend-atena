@@ -1,11 +1,18 @@
 import React from "react";
-import * as Styles from "./styles.js";
+import styled from "styled-components";
 import Card from "../shared/Card/";
+
+export const Container = styled.div`
+  background-color: #ecf1f4;
+  width: 400px;
+  padding: 16px;
+  margin: auto;
+`;
 
 export default function Home() {
   return (
-    <Styles.Container>
+    <Container>
       <Card />
-    </Styles.Container>
+    </Container>
   );
 }
