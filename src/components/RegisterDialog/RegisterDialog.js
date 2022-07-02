@@ -18,10 +18,11 @@ export default function RegisterDialog(props) {
   return (
     <Dialog onClose={handleClose} open={open} fullWidth={false} maxWidth="40px">
       <Styles.Content>
-        <InfoIcon style={{ fontSize: 80, color: "#8b13cd" }} />
+        <InfoIcon style={{ fontSize: 80 }} color="secondary" />
         <Typography variant="h6" marginBottom="8px">
           <Link
-            style={{ textDecoration: "none", color: "#8b13cd" }}
+            style={{ textDecoration: "none" }}
+            color="secondary"
             href="/register"
           >
             Complete seu cadastro!

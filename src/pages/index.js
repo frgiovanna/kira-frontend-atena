@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import BottomMenu from "../components/BottomMenu";
 import Card from "../components/Card";
 import LinkList from "../components/LinkList";
 import ProfileHeader from "../components/ProfileHeader";
@@ -9,7 +10,6 @@ export const Container = styled.div`
   background-color: #ecf1f4;
   width: 400px;
   height: 800px;
-  padding: 16px;
   margin: auto;
 `;
 
@@ -23,10 +23,15 @@ export default function Home() {
 
   return (
     <Container>
-      <ProfileHeader />
-      <Card />
-      <LinkList />
-      {!isLogged && <RegisterDialog open={openDialog} onClose={handleClose} />}
+      <div style={{ padding: 16 }}>
+        <ProfileHeader />
+        <Card />
+        <LinkList />
+        {!isLogged && (
+          <RegisterDialog open={openDialog} onClose={handleClose} />
+        )}
+      </div>
+      <BottomMenu />
     </Container>
   );
 }

@@ -11,7 +11,7 @@ export default function LinkList() {
     <>
       <Styles.Item>
         <Styles.TitleWrapper>
-          <LibraryBooksIcon sx={{ color: "#f62459" }} />
+          <LibraryBooksIcon color="primary" />
           <Styles.Title>conteúdo</Styles.Title>
         </Styles.TitleWrapper>
         <Typography variant="body2" color="text.secondary" marginY="10px">
@@ -23,7 +23,7 @@ export default function LinkList() {
       </Styles.Item>
       <Styles.Item>
         <Styles.TitleWrapper>
-          <ShoppingCartIcon sx={{ color: "#f62459" }} />
+          <ShoppingCartIcon color="primary" />
           <Styles.Title>shopping</Styles.Title>
         </Styles.TitleWrapper>
         <Typography variant="body2" color="text.secondary" marginY="10px">
@@ -36,7 +36,7 @@ export default function LinkList() {
       </Styles.Item>
       <Styles.Item>
         <Styles.TitleWrapper>
-          <ForumIcon sx={{ color: "#f62459" }} />
+          <ForumIcon color="primary" />
           <Styles.Title>chama a Kira</Styles.Title>
         </Styles.TitleWrapper>
         <Typography variant="body2" color="text.secondary" marginY="10px">

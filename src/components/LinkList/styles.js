@@ -10,13 +10,13 @@ export const Item = styled.section`
 `;
 
 export const Title = styled(Typography).attrs({
-  sx: { color: "#f62459" },
+  color: "primary",
 })`
   margin-left: 10px;
 `;
 
 export const Button = styled(MUIButton).attrs({
-  sx: { color: "#f62459" },
+  color: "primary",
   size: "small",
 })`
   font-size: 10px;

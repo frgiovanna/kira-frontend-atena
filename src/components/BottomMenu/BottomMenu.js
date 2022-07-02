@@ -1,44 +1,34 @@
 import * as React from "react";
+import Box from "@mui/material/Box";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
-import FolderIcon from "@mui/icons-material/Folder";
-import RestoreIcon from "@mui/icons-material/Restore";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
+import ForumIcon from "@mui/icons-material/Forum";
+import HomeIcon from "@mui/icons-material/Home";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
-export default function BottomMenu() {
-  const [value, setValue] = React.useState("recents");
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+export default function SimpleBottomNavigation() {
+  const [value, setValue] = React.useState(2);
 
   return (
-    <BottomNavigation
-      sx={{ width: '100%' }}
-      value={value}
-      onChange={handleChange}
-    >
-      <BottomNavigationAction
-        label="Recents"
-        value="recents"
-        icon={<RestoreIcon />}
-      />
-      <BottomNavigationAction
-        label="Favorites"
-        value="favorites"
-        icon={<FavoriteIcon />}
-      />
-      <BottomNavigationAction
-        label="Nearby"
-        value="nearby"
-        icon={<LocationOnIcon />}
-      />
-      <BottomNavigationAction
-        label="Folder"
-        value="folder"
-        icon={<FolderIcon />}
-      />
-    </BottomNavigation>
+    <Box sx={{ width: 400 , bottom: 0, position: 'relative'}}>
+      <BottomNavigation
+        showLabels
+        value={value}
+        onChange={(event, newValue) => {
+          setValue(newValue);
+        }}
+      >
+        <BottomNavigationAction
+          label="calendário"
+          icon={<CalendarMonthIcon />}
+        />
+        <BottomNavigationAction sx={{ width: 400, fontSize: "4px" }}label="conteúdo" icon={<LibraryBooksIcon />} />
+        <BottomNavigationAction icon={<HomeIcon />} />
+        <BottomNavigationAction label="chama a Kira" icon={<ForumIcon />} />
+        <BottomNavigationAction label="shopping" icon={<ShoppingCartIcon />} />
+      </BottomNavigation>
+    </Box>
   );
 }
