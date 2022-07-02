@@ -13,7 +13,7 @@ export default function RegisterText() {
         color="primary"
         sx={{ fontSize: 40, marginRight: "10px" }}
       />
-      <Typography variant="body2" color="text.secondary">
+      <Typography color="text.secondary" fontSize={12} lineHeight='13px'>
         complete seu cadastro para aproveitar tudo o que o app oferece!
       </Typography>
     </Styles.Box>

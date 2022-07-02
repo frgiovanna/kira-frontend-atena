@@ -15,6 +15,15 @@ export const Title = styled(Typography).attrs({
   margin-left: 10px;
 `;
 
+export const Description = styled(Typography).attrs({
+  color: "primary",
+  variant: "body2",
+  color: "text.secondary",
+})`
+  margin: 10px 0 10px 0;
+  line-height: 16px;
+`;
+
 export const Button = styled(MUIButton).attrs({
   color: "primary",
   size: "small",

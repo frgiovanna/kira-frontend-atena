@@ -14,9 +14,9 @@ export default function LinkList() {
           <LibraryBooksIcon color="primary" />
           <Styles.Title>conteúdo</Styles.Title>
         </Styles.TitleWrapper>
-        <Typography variant="body2" color="text.secondary" marginY="10px">
+        <Styles.Description>
           uma variedade de conteúdos sobre autoconhecimento feminino
-        </Typography>
+        </Styles.Description>
         <Styles.Button startIcon={<AddCircleRoundedIcon />}>
           meus assuntos de interesse
         </Styles.Button>
@@ -26,10 +26,10 @@ export default function LinkList() {
           <ShoppingCartIcon color="primary" />
           <Styles.Title>shopping</Styles.Title>
         </Styles.TitleWrapper>
-        <Typography variant="body2" color="text.secondary" marginY="10px">
+        <Styles.Description>
           em nosso shopping você encontra produtos especiais. além disso, você
           também pode criar seus kits personalizados
-        </Typography>
+        </Styles.Description>
         <Styles.Button startIcon={<ShoppingCartIcon />}>
           visite agora!
         </Styles.Button>
@@ -39,10 +39,10 @@ export default function LinkList() {
           <ForumIcon color="primary" />
           <Styles.Title>chama a Kira</Styles.Title>
         </Styles.TitleWrapper>
-        <Typography variant="body2" color="text.secondary" marginY="10px">
+        <Styles.Description>
           dúvidas sobre saúde íntima? chama a Kira! aqui você encontra dúvidas
           já respondidas por ginecologistas
-        </Typography>
+        </Styles.Description>
         <Styles.Button startIcon={<ForumIcon />}>conheça mais</Styles.Button>
       </Styles.Item>
     </>
