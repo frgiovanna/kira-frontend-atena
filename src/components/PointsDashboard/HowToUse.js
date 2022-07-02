@@ -1,11 +1,5 @@
 import React from "react";
 
-import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
-import IosShareRoundedIcon from "@mui/icons-material/IosShareRounded";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import AddCircleRoundedIcon from "@mui/icons-material/AddCircleRounded";
-import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-
 import * as Styles from "./styles";
 import Image from "next/image";
 

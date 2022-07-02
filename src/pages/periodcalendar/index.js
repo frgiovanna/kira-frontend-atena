@@ -1,7 +1,14 @@
-import React from 'react'
+import React from "react";
+import BottomMenu from "../../components/BottomMenu";
+import Header from "../../components/Header";
+import PeriodForm from "../../components/PeriodForm";
 
-export default function Calendar() {
+export default function Points() {
   return (
-    <div>periodcalendar</div>
-  )
+    <>
+      <Header title="Calendário" />
+      <PeriodForm />
+      <BottomMenu />
+    </>
+  );
 }

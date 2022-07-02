@@ -6,7 +6,6 @@ import * as Styles from "./styles";
 
 export default function PointsDashboard() {
   const [value, setValue] = React.useState("howToGet");
-  console.log(value);
   return (
     <Styles.Box>
       <div
