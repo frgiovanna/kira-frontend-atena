@@ -10,6 +10,7 @@ export const Card = styled.div`
 
 export const TitleWrapper = styled.div`
   display: flex;
+  align-items: center;
 `;
 
 export const Button = styled.a`
