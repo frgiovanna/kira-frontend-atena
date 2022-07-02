@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Card from "../shared/Card/";
+import ProfileHeader from "../shared/ProfileHeader";
 
 export const Container = styled.div`
   background-color: #ecf1f4;
@@ -11,8 +12,11 @@ export const Container = styled.div`
 
 export default function Home() {
   return (
-    <Container>
-      <Card />
-    </Container>
+    <>
+      <Container>
+        <ProfileHeader />
+        <Card />
+      </Container>
+    </>
   );
 }

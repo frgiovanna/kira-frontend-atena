@@ -1,18 +1,14 @@
 import React from "react";
-import Image from "next/image";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import { Typography } from "@mui/material";
 import * as Styles from "./styles";
 
 export default function Card() {
   return (
     <Styles.Card>
       <Styles.TitleWrapper>
-        <Image
-          alt="calendar icon"
-          src={"/calendar.svg"}
-          width={20}
-          height={20}
-        />
-        <h3>calendário menstrual</h3>
+        <CalendarMonthIcon />
+        <Typography variant="h6">calendário menstrual</Typography>
       </Styles.TitleWrapper>
       <p>
         insira os dados do seu ciclo menstrual
