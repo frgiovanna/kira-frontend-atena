@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 export const Card = styled.div`
   background: ${(props) =>
@@ -49,9 +49,7 @@ export const Item = styled.div`
   max-width: 120px;
 `;
 
-export const FooterTitle = styled(Typography).attrs({
-  color: "text.secondary",
-})`
+export const FooterTitle = styled(Typography)`
   font-size: 12px;
   line-height: 12px;
 `;

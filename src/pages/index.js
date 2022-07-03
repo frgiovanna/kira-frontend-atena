@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import BottomMenu from "../components/BottomMenu";
 import Card from "../components/Card";
 import LinkList from "../components/LinkList";

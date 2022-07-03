@@ -1,9 +1,7 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import { Typography } from "@mui/material";
 
-export const InputLabel = styled(Typography).attrs({
-  color: "text.secondary",
-})`
+export const InputLabel = styled(Typography)`
   font-size: 14px;
   margin-top: 34px;
 `;
@@ -27,3 +25,4 @@ export const ButtonWrapper = styled.div`
   align-items: center;
   width: 100%;
 `;
+

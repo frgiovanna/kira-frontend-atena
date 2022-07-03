@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import { Button as MUIButton, Typography } from "@mui/material";
 
 export const TitleWrapper = styled.div`
@@ -10,26 +10,17 @@ export const Item = styled.section`
   margin-bottom: 36px;
 `;
 
-export const Title = styled(Typography).attrs({
-  color: "text.secondary",
-})`
+export const Title = styled(Typography)`
   font-size: 16px;
   margin-left: 10px;
 `;
 
-export const Description = styled(Typography).attrs({
-  color: "primary",
-  variant: "body2",
-  color: "text.secondary",
-})`
+export const Description = styled(Typography)`
   margin: 10px 0 10px 0;
   line-height: 16px;
 `;
 
-export const Button = styled(MUIButton).attrs({
-  color: "primary",
-  size: "small",
-})`
+export const Button = styled(MUIButton)`
   font-size: 10px;
 `;
 

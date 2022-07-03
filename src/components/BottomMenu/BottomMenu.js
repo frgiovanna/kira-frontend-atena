@@ -1,5 +1,5 @@
 import * as React from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import Box from "@mui/material/Box";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
@@ -18,7 +18,9 @@ export default function SimpleBottomNavigation() {
   const [value, setValue] = React.useState(2);
 
   return (
-    <Box sx={{ width: 400, bottom: 0, position: "fixed", backgroundColor: 'grey'}}>
+    <Box
+      sx={{ width: 400, bottom: 0, position: "fixed", backgroundColor: "grey" }}
+    >
       <BottomNavigation
         showLabels
         value={value}

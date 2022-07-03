@@ -1,6 +1,6 @@
 import * as React from "react";
 import "../../styles/globals.css";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
