@@ -6,8 +6,8 @@ import MenuItem from "@mui/material/MenuItem";
 import { Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import api from "../../service/api";
-import { getItem } from "../../utils/storage";
 import * as Styles from "./styles";
+import { useUserContext } from "../../context/UserProvider";
 
 const defaultValues = {
   last_period: "",
@@ -18,14 +18,11 @@ const defaultValues = {
 };
 
 const PeriodForm = () => {
+  const { token } = useUserContext();
+  console.log(token);
+
   const { push } = useRouter();
   const [formValues, setFormValues] = useState(defaultValues);
-  const [userToken, setUserToken] = React.useState('');
-
-  useEffect(() => {
-    const token = getItem('token');
-    setUserToken(token);
-  }, []);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -35,43 +32,44 @@ const PeriodForm = () => {
     });
   };
 
-
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
       const response = await api.all([
-        api.post("/register/info", {
-          last_period: formValues.last_period,
-          period_length: formValues.period_length,
-          intensity: formValues.intensity,
-          cycle_length: formValues.cycle_length,
-          birth_control_method: formValues.birth_control_method
-        },
+        api.post(
+          "/register/info",
+          {
+            last_period: formValues.last_period,
+            period_length: formValues.period_length,
+            intensity: formValues.intensity,
+            cycle_length: formValues.cycle_length,
+            birth_control_method: formValues.birth_control_method,
+          },
           {
             headers: {
-              Authorization: `Bearer ${userToken}`
-            }
-          }),
-        api.put("/register/points",
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        ),
+        api.put(
+          "/register/points",
+          {},
           {
             headers: {
-              Authorization: `Bearer ${userToken}`
-            }
-          })
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        ),
       ]);
 
       if (response.status > 204) {
         return;
       }
-
-      console.log(response.data)
-
-      push("/reports");
-
     } catch (error) {
       console.log(error.message);
     }
+    push("/periodcalendar");
   };
 
   return (

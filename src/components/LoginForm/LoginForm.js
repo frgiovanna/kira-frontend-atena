@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { TextField, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import * as Styles from "../PeriodForm/styles";
-import { setItem } from '../../utils/storage';
-import api from '../../service/api';
+import { setItem } from "../../utils/storage";
+import api from "../../service/api";
+import { useUserContext } from "../../context/UserProvider";
 
 const defaultValues = {
   email: "",
@@ -11,6 +12,7 @@ const defaultValues = {
 };
 
 const LoginForm = () => {
+  const { setToken } = useUserContext();
   const { push } = useRouter();
   const [formValues, setFormValues] = useState(defaultValues);
   const handleInputChange = (e) => {
@@ -26,7 +28,7 @@ const LoginForm = () => {
     try {
       const response = await api.post("/login", {
         email: formValues.email,
-        password: formValues.password
+        password: formValues.password,
       });
 
       if (response.status > 204) {
@@ -37,9 +39,9 @@ const LoginForm = () => {
 
       setItem("token", token);
       setItem("userId", user.id);
+      setToken(token);
 
       push("/");
-
     } catch (error) {
       console.log(error.message);
     }

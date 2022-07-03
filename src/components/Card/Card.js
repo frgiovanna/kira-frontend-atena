@@ -3,8 +3,15 @@ import PropTypes from "prop-types";
 
 import { Typography } from "@mui/material";
 import * as Styles from "./styles";
+import { useRouter } from "next/router";
 
 export default function Card(props) {
+  const { push } = useRouter();
+
+  const handleRedirect = () => {
+    push(props.link);
+  };
+
   return (
     <Styles.Card secondary={props.secondary}>
       <Styles.TitleWrapper>
@@ -17,7 +24,7 @@ export default function Card(props) {
         {props.description}
       </Typography>
 
-      <Styles.Button secondary={props.secondary} href={props.link}>
+      <Styles.Button secondary={props.secondary} onClick={handleRedirect}>
         {props.label}
       </Styles.Button>
 

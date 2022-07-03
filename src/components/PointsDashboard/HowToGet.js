@@ -17,7 +17,7 @@ export default function HowToGet() {
           <Styles.Title color="text.secondary">
             Deixe seu calendário menstrual atualizado
             <br />
-            <strong>20 pontos</strong>
+            <strong>100 pontos</strong>
           </Styles.Title>
         </Styles.TitleWrapper>
       </Styles.Item>

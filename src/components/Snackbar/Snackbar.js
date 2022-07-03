@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import * as React from "react";
+import { useRouter } from "next/router";
 import {
   Snackbar as MUISnackbar,
   SnackbarContent,
@@ -9,6 +10,11 @@ import CloseIcon from "@mui/icons-material/Close";
 
 export default function Snackbar() {
   const [open, setOpen] = React.useState(true);
+  const { push } = useRouter();
+
+  const handleRedirect = () => {
+    push("/points");
+  };
 
   const handleClose = () => {
     setOpen(false);
@@ -44,17 +50,17 @@ export default function Snackbar() {
           }}
           message={
             <>
-              Parabéns! Você atualizou seu calendário e ganhou 50 pontos!
-              <a
-                href="/points"
+              Parabéns! Você atualizou seu calendário e ganhou 100 pontos!
+              <span
                 style={{
                   color: "#f62459",
                   textDecoration: "underline",
                   marginLeft: "4px",
                 }}
+                onClick={handleRedirect}
               >
                 Saiba como utilizar
-              </a>
+              </span>
             </>
           }
         />

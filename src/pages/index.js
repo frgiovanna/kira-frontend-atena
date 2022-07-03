@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "@emotion/styled";
 import BottomMenu from "../components/BottomMenu";
 import Card from "../components/Card";
@@ -10,8 +10,8 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import WarningRoundedIcon from "@mui/icons-material/WarningRounded";
 import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import WorkspacePremiumRoundedIcon from "@mui/icons-material/WorkspacePremiumRounded";
-import { getItem } from "../utils/storage";
-import api from '../service/api';
+import api from "../service/api";
+import { useUserContext } from "../context/UserProvider";
 
 export const Container = styled.div`
   width: 400px;
@@ -20,26 +20,17 @@ export const Container = styled.div`
   margin-bottom: 50px;
 `;
 
-// const token = localStorage.getItem('token');
-
 export default function Home() {
-  const isServer = typeof window === 'undefined';
-
-  const [userToken, setUserToken] = React.useState('');
+  const { token } = useUserContext();
   const [openDialog, setOpenDialog] = React.useState(true);
-  const isLogged = userToken ? true : false;
+  const isLogged = token ? true : false;
 
-  const [totalPoints, setTotalPoints] = React.useState('');
+  const [totalPoints, setTotalPoints] = React.useState("");
 
   React.useEffect(() => {
-    const token = getItem('token');
-    console.log('pegou o token');
-
-    setUserToken(token);
-    console.log(token);
-
-    handleTotalPoints();
-
+    if (token) {
+      handleTotalPoints();
+    }
   }, []);
 
   const handleClose = () => {
@@ -47,22 +38,19 @@ export default function Home() {
   };
 
   const handleTotalPoints = async () => {
-    console.log('entrou na função');
 
     try {
-      const response = await api.get("/points",
-        {
-          headers: {
-            Authorization: `Bearer ${!isServer ? userToken : null}`
-          }
-        });
+      const response = await api.get("/points", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
 
       if (response.status > 204) {
         return;
       }
 
       setTotalPoints(response.data.total);
-
     } catch (error) {
       console.log(error.message);
     }
@@ -107,7 +95,7 @@ export default function Home() {
           title="calendário menstrual"
           description="insira os dados do seu ciclo menstrual
       para acompanhar todos os detalhes!"
-          link="/periodcalendar"
+          link="/register"
           label="criar meu calendário"
           footer={{
             firstTitle: "Probabilidade de engravidar",
@@ -136,16 +124,3 @@ export default function Home() {
     </Container>
   );
 }
-
-// export const getStaticProps = async () => {
-//   const res = await api.get("/points",
-//     {
-//       headers: {
-//         Authorization: `Bearer ${token}`
-//       }
-//     });
-//   console.log(res.data);
-//   return {
-//     props: { data: res.data.slice(0, 10) },
-//   };
-// };
