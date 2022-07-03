@@ -1,7 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 
-import { IconButton, Dialog, Typography, Link } from "@mui/material/IconButton";
+import { IconButton, Dialog, Typography, Link } from "@mui/material/";
 import InfoIcon from "@mui/icons-material/Info";
 import CloseIcon from "@mui/icons-material/Close";
 
