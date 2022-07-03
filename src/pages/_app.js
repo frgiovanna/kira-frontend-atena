@@ -17,7 +17,6 @@ const theme = createTheme({
 
 export const Container = styled.div`
   width: 400px;
-  background-color: #ecf1f4;
   margin: auto;
   margin-bottom: 50px;
 `;
