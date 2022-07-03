@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import {
-  Typography,
-  TextField,
-  FormControl,
-  Select,
-  MenuItem,
-} from "@mui/material";
+import TextField from "@mui/material/TextField";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
+import { Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import * as Styles from "./styles";
 
