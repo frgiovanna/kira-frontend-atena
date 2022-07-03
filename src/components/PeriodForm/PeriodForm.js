@@ -65,13 +65,6 @@ const PeriodForm = () => {
     }
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    //TODO - send to Backend
-    console.log(formValues);
-    push("/reports");
-  };
-
   return (
     <form onSubmit={handleSubmit} style={{ padding: "16px" }}>
       <Typography color="primary" textAlign="center" fontSize={16}>
