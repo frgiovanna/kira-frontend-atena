@@ -1,13 +1,9 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
 import * as React from "react";
-import {
-  Snackbar as MUISnackbar,
-  SnackbarContent,
-  IconButton,
-} from "@mui/material/";
+import Snackbar from "@mui/material/Snackbar";
+import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 
-export default function Snackbar() {
+export default function SimpleSnackbar() {
   const [open, setOpen] = React.useState(true);
 
   const handleClose = () => {
@@ -29,36 +25,14 @@ export default function Snackbar() {
 
   return (
     <div>
-      <MUISnackbar
+      <Snackbar
         open={open}
         anchorOrigin={{ vertical: "top", horizontal: "center" }}
-        autoHideDuration={10000}
+        autoHideDuration={8000}
         onClose={handleClose}
+        message="Parabéns! Você ganhou 50 pontos!"
         action={action}
-      >
-        <SnackbarContent
-          style={{
-            backgroundColor: "white",
-            color: "grey",
-            maxWidth: "400px",
-          }}
-          message={
-            <>
-              Parabéns! Você atualizou seu calendário e ganhou 50 pontos!
-              <a
-                href="/points"
-                style={{
-                  color: "#f62459",
-                  textDecoration: "underline",
-                  marginLeft: "4px",
-                }}
-              >
-                Saiba como utilizar
-              </a>
-            </>
-          }
-        />
-      </MUISnackbar>
+      />
     </div>
   );
 }
