@@ -3,7 +3,7 @@ import BottomMenu from "../../components/BottomMenu";
 import Header from "../../components/Header";
 import PeriodForm from "../../components/PeriodForm";
 
-export default function Points() {
+export default function CalendarInfo() {
   return (
     <>
       <Header title="Calendário" />

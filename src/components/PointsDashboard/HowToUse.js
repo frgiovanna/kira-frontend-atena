@@ -1,7 +1,7 @@
 import React from "react";
+import Image from "next/image";
 
 import * as Styles from "./styles";
-import Image from "next/image";
 
 export default function HowToUse() {
   return (
