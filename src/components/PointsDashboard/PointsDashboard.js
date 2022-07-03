@@ -5,8 +5,7 @@ import HowToUse from "./HowToUse";
 import * as Styles from "./styles";
 
 export default function PointsDashboard() {
-  const [value, setValue] = React.useState("howToGet"); 
-
+  const [value, setValue] = React.useState("howToGet");
   return (
     <Styles.Box>
       <div
@@ -26,7 +25,7 @@ export default function PointsDashboard() {
         </Styles.HowToUseSection>
       </div>
 
-      <div style={{ margin: "0px 0px 80px 16px" }}>
+      <div style={{ marginLeft: "16px", paddingBottom: "10px" }}>
         {value === "howToUse" ? <HowToUse /> : <HowToGet />}
       </div>
     </Styles.Box>

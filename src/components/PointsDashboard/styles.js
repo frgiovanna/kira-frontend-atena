@@ -42,6 +42,7 @@ export const Box = styled.div`
 export const HowToGetSection = styled.section`
   width: 100%;
   padding: 12px;
+  cursor: pointer;
   box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2);
   ${(props) =>
     props.value === "howToGet"
@@ -51,6 +52,7 @@ export const HowToGetSection = styled.section`
 
 export const HowToUseSection = styled.section`
   width: 100%;
+  cursor: pointer;
   padding: 12px;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
   ${(props) =>
