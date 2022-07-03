@@ -81,3 +81,10 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
+
+export const getStaticProps = async () => {
+  const res = await api.post("/login");
+  return {
+    props: { data: res.data.slice(0, 10) },
+  };
+};

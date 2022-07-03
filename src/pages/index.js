@@ -20,7 +20,11 @@ export const Container = styled.div`
   margin-bottom: 50px;
 `;
 
+// const token = localStorage.getItem('token');
+
 export default function Home() {
+  const isServer = typeof window === 'undefined';
+
   const [userToken, setUserToken] = React.useState('');
   const [openDialog, setOpenDialog] = React.useState(true);
   const isLogged = userToken ? true : false;
@@ -29,7 +33,11 @@ export default function Home() {
 
   React.useEffect(() => {
     const token = getItem('token');
+    console.log('pegou o token');
+
     setUserToken(token);
+    console.log(token);
+
     handleTotalPoints();
 
   }, []);
@@ -39,11 +47,13 @@ export default function Home() {
   };
 
   const handleTotalPoints = async () => {
+    console.log('entrou na função');
+
     try {
       const response = await api.get("/points",
         {
           headers: {
-            Authorization: `Bearer ${userToken}`
+            Authorization: `Bearer ${!isServer ? userToken : null}`
           }
         });
 
@@ -126,3 +136,16 @@ export default function Home() {
     </Container>
   );
 }
+
+// export const getStaticProps = async () => {
+//   const res = await api.get("/points",
+//     {
+//       headers: {
+//         Authorization: `Bearer ${token}`
+//       }
+//     });
+//   console.log(res.data);
+//   return {
+//     props: { data: res.data.slice(0, 10) },
+//   };
+// };
