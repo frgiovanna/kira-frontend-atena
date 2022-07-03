@@ -27,6 +27,15 @@ const PeriodForm = () => {
     setUserToken(token);
   }, []);
 
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({
+      ...formValues,
+      [name]: value,
+    });
+  };
+
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
