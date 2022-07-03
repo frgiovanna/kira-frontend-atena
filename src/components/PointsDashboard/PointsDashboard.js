@@ -25,7 +25,7 @@ export default function PointsDashboard() {
         </Styles.HowToUseSection>
       </div>
 
-      <div style={{ margin: "0px 0px 80px 16px" }}>
+      <div style={{ marginLeft: "16px", paddingBottom: "10px" }}>
         {value === "howToUse" ? <HowToUse /> : <HowToGet />}
       </div>
     </Styles.Box>

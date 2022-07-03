@@ -23,6 +23,7 @@ export const Button = styled.button`
 export const ButtonWrapper = styled.div`
   margin-top: 48px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
 `;
