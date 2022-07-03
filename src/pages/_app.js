@@ -2,6 +2,7 @@ import * as React from "react";
 import "../../styles/globals.css";
 import styled from "@emotion/styled";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { UserProvider } from "../context/UserProvider";
 
 const theme = createTheme({
   palette: {
@@ -24,9 +25,11 @@ export const Container = styled.div`
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
-      <Container>
-        <Component {...pageProps} />
-      </Container>
+      <UserProvider>
+        <Container>
+          <Component {...pageProps} />
+        </Container>
+      </UserProvider>
     </ThemeProvider>
   );
 }

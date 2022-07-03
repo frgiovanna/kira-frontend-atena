@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useRouter } from "next/router";
 import styled from "@emotion/styled";
 import Box from "@mui/material/Box";
 import BottomNavigation from "@mui/material/BottomNavigation";
@@ -15,6 +16,11 @@ const NavigationItem = styled(BottomNavigationAction)`
   }
 `;
 export default function SimpleBottomNavigation() {
+  const { push } = useRouter();
+
+  const handleRedirect = () => {
+    push("/");
+  };
   const [value, setValue] = React.useState(2);
 
   return (
@@ -34,7 +40,7 @@ export default function SimpleBottomNavigation() {
           label="conteúdo"
           icon={<LibraryBooksIcon />}
         />
-        <NavigationItem icon={<HomeRoundedIcon />} />
+        <NavigationItem onClick={handleRedirect} icon={<HomeRoundedIcon />} />
         <NavigationItem label="chama a Kira" icon={<ForumRoundedIcon />} />
         <NavigationItem label="shopping" icon={<ShoppingCartRoundedIcon />} />
       </BottomNavigation>
