@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "@emotion/styled";
 import BottomMenu from "../components/BottomMenu";
 import Card from "../components/Card";
