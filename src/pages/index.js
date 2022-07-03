@@ -34,14 +34,14 @@ export default function Home() {
           <TextBox
             icon={<WarningRoundedIcon color="primary" />}
             message="complete seu cadastro para aproveitar tudo o que o app oferece!"
-            link="/periodcalendar"
+            link="/register"
           />
           <Card
             icon={<CalendarMonthIcon />}
             title="calendário menstrual"
             description="insira os dados do seu ciclo menstrual
           para acompanhar todos os detalhes!"
-            button="/periodcalendar"
+            button="/register"
             label="criar meu calendário"
           />
           <LinkList />
@@ -65,7 +65,7 @@ export default function Home() {
           title="calendário menstrual"
           description="insira os dados do seu ciclo menstrual
       para acompanhar todos os detalhes!"
-          link="/periodcalendar"
+          link="/register"
           label="criar meu calendário"
           footer={{
             firstTitle: "Probabilidade de engravidar",
