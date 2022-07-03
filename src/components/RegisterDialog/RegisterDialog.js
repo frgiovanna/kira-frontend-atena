@@ -23,7 +23,7 @@ export default function RegisterDialog(props) {
           <Link
             style={{ textDecoration: "none" }}
             color="secondary"
-            href="/register"
+            href="/login"
           >
             Complete seu cadastro!
           </Link>
