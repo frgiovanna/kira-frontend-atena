@@ -25,7 +25,12 @@ export default function SimpleBottomNavigation() {
 
   return (
     <Box
-      sx={{ width: 400, bottom: 0, position: "fixed", backgroundColor: "grey" }}
+      sx={{
+        width: 400,
+        bottom: 0,
+        position: "fixed",
+        ".MuiBottomNavigation-root": { backgroundColor: "white" },
+      }}
     >
       <BottomNavigation
         showLabels

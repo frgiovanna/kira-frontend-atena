@@ -41,17 +41,19 @@ export default function Card(props) {
               {props.footer.firstContent}
             </Typography>
           </Styles.Item>
-          <Styles.Item>
-            <Styles.FooterTitle color="text.secondary">
-              {props.footer.secondTitle}
-            </Styles.FooterTitle>
-            <Typography
-              fontSize={16}
-              color={props.secondary ? "secondary" : "primary"}
-            >
-              {props.footer.secondContent}
-            </Typography>
-          </Styles.Item>
+          {props.footer.secondContent && (
+            <Styles.Item>
+              <Styles.FooterTitle color="text.secondary">
+                {props.footer.secondTitle}
+              </Styles.FooterTitle>
+              <Typography
+                fontSize={16}
+                color={props.secondary ? "secondary" : "primary"}
+              >
+                {props.footer.secondContent}
+              </Typography>
+            </Styles.Item>
+          )}
         </Styles.Footer>
       )}
     </Styles.Card>

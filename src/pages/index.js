@@ -15,7 +15,6 @@ import { useUserContext } from "../context/UserProvider";
 
 export const Container = styled.div`
   width: 400px;
-  background-color: #ecf1f4;
   margin: auto;
   margin-bottom: 50px;
 `;
@@ -58,7 +57,7 @@ export default function Home() {
 
   if (!isLogged) {
     return (
-      <Container>
+      <>
         <div style={{ padding: 16 }}>
           <ProfileHeader />
           <TextBox
@@ -78,7 +77,7 @@ export default function Home() {
           <RegisterDialog open={openDialog} onClose={handleClose} />
         </div>
         <BottomMenu />
-      </Container>
+      </>
     );
   }
 
@@ -115,7 +114,6 @@ export default function Home() {
             firstTitle: "Sua pontuação atual",
             firstContent: `${totalPoints} pontos`,
             secondTitle: "Você tem pontos que expiram em",
-            secondContent: "19 dias",
           }}
         />
         <LinkList />

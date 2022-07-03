@@ -20,6 +20,7 @@ export const TitleWrapper = styled.div`
 `;
 
 export const Button = styled.a`
+  cursor: pointer;
   display: block;
   width: fit-content;
   padding-left: 14px;
