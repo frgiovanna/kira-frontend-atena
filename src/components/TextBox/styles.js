@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 export const Box = styled.div`
   display: flex;
@@ -8,5 +8,5 @@ export const Box = styled.div`
   box-shadow: 0 4px 10px rgb(0 0 0 / 20%);
   padding: 16px;
   margin-bottom: 16px;
-  cursor: pointer
+  cursor: pointer;
 `;
