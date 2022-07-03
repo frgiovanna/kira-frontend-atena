@@ -2,7 +2,7 @@ import React from "react";
 import BottomMenu from "../../components/BottomMenu";
 import Header from "../../components/Header";
 import Calendar from "../../components/Calendar";
-import SimpleSnackbar from "../../components/Snackbar/Snackbar";
+import Snackbar from "../../components/Snackbar";
 
 export default function PeriodCalendar() {
   return (
@@ -11,7 +11,7 @@ export default function PeriodCalendar() {
 
       <Calendar />
       <BottomMenu />
-      <SimpleSnackbar/>
+      <Snackbar />
     </>
   );
 }
