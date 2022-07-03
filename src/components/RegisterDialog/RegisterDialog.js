@@ -1,11 +1,10 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 
+import { IconButton, Dialog, Typography, Link } from "@mui/material/IconButton";
 import InfoIcon from "@mui/icons-material/Info";
-import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
-import Dialog from "@mui/material/Dialog";
-import { Link, Typography } from "@mui/material";
+
 import * as Styles from "./styles";
 
 export default function RegisterDialog(props) {

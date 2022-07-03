@@ -1,8 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import Box from "@mui/material/Box";
-import BottomNavigation from "@mui/material/BottomNavigation";
-import BottomNavigationAction from "@mui/material/BottomNavigationAction";
+import { Box, BottomNavigation, BottomNavigationAction } from "@mui/material/";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import ForumRoundedIcon from "@mui/icons-material/ForumRounded";
@@ -18,7 +16,9 @@ export default function SimpleBottomNavigation() {
   const [value, setValue] = React.useState(2);
 
   return (
-    <Box sx={{ width: 400, bottom: 0, position: "fixed", backgroundColor: 'grey'}}>
+    <Box
+      sx={{ width: 400, bottom: 0, position: "fixed", backgroundColor: "grey" }}
+    >
       <BottomNavigation
         showLabels
         value={value}
