@@ -115,7 +115,6 @@ export default function Home() {
             firstTitle: "Sua pontuação atual",
             firstContent: `${totalPoints} pontos`,
             secondTitle: "Você tem pontos que expiram em",
-            secondContent: "19 dias",
           }}
         />
         <LinkList />
