@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 export const ProfileHeader = styled.div`
   display: flex;
@@ -8,8 +8,8 @@ export const ProfileHeader = styled.div`
 `;
 
 export const Wrapper = styled.div`
-display: flex;
-`
+  display: flex;
+`;
 export const Icon = styled.div`
   display: flex;
   justify-content: center;
@@ -22,6 +22,6 @@ export const Icon = styled.div`
 `;
 
 export const TextWrapper = styled.div`
-margin-left: 4px;
-max-width: 200px;
-`
+  margin-left: 4px;
+  max-width: 200px;
+`;

@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import BottomMenu from "../components/BottomMenu";
 import Card from "../components/Card";
 import LinkList from "../components/LinkList";
@@ -76,14 +76,22 @@ export default function Home() {
           <TextBox
             icon={<WarningRoundedIcon color="primary" />}
             message="complete seu cadastro para aproveitar tudo o que o app oferece!"
+<<<<<<< HEAD
             link="/periodcalendar"
+=======
+            link="/login"
+>>>>>>> master
           />
           <Card
             icon={<CalendarMonthIcon />}
             title="calendário menstrual"
             description="insira os dados do seu ciclo menstrual
           para acompanhar todos os detalhes!"
+<<<<<<< HEAD
             button="/periodcalendar"
+=======
+            link="/login"
+>>>>>>> master
             label="criar meu calendário"
           />
           <LinkList />

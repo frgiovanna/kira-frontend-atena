@@ -78,7 +78,7 @@ const PeriodForm = () => {
         Insira as informações sobre o seu ciclo para atualizar o seu Calendário
         menstrual
       </Typography>
-      <Styles.InputLabel>
+      <Styles.InputLabel color="text.secondary">
         quando começou sua última menstruação?
       </Styles.InputLabel>
       <TextField
@@ -90,7 +90,7 @@ const PeriodForm = () => {
         style={{ width: "100%", backgroundColor: "white" }}
       />
 
-      <Styles.InputLabel>
+      <Styles.InputLabel color="text.secondary">
         por quantos dias você costuma ficar menstruada?
       </Styles.InputLabel>
       <TextField
@@ -102,7 +102,7 @@ const PeriodForm = () => {
         style={{ width: "100%", backgroundColor: "white" }}
       />
 
-      <Styles.InputLabel>
+      <Styles.InputLabel color="text.secondary">
         como você diria que é a intensidade do seu fluxo?
       </Styles.InputLabel>
       <FormControl style={{ width: "100%", backgroundColor: "white" }}>
@@ -124,7 +124,9 @@ const PeriodForm = () => {
         </Select>
       </FormControl>
 
-      <Styles.InputLabel>quantos dias tem seu ciclo?</Styles.InputLabel>
+      <Styles.InputLabel color="text.secondary">
+        quantos dias tem seu ciclo?
+      </Styles.InputLabel>
 
       <TextField
         type="number"
@@ -141,7 +143,9 @@ const PeriodForm = () => {
         entre 21 e 35 dias.
       </Typography>
 
-      <Styles.InputLabel>Utiliza algum método contraceptivo?</Styles.InputLabel>
+      <Styles.InputLabel color="text.secondary">
+        Utiliza algum método contraceptivo?
+      </Styles.InputLabel>
 
       <FormControl style={{ width: "100%", backgroundColor: "white" }}>
         <Select
