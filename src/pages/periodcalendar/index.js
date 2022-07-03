@@ -1,7 +1,17 @@
-import React from 'react'
+import React from "react";
+import BottomMenu from "../../components/BottomMenu";
+import Header from "../../components/Header";
+import Calendar from "../../components/Calendar";
+import Snackbar from "../../components/Snackbar";
 
-export default function Calendar() {
+export default function PeriodCalendar() {
   return (
-    <div>periodcalendar</div>
-  )
+    <>
+      <Header title="Calendário" />
+
+      <Calendar />
+      <BottomMenu />
+      <Snackbar />
+    </>
+  );
 }

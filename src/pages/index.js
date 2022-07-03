@@ -66,14 +66,14 @@ export default function Home() {
           <TextBox
             icon={<WarningRoundedIcon color="primary" />}
             message="complete seu cadastro para aproveitar tudo o que o app oferece!"
-            link="/register"
+            link="/login"
           />
           <Card
             icon={<CalendarMonthIcon />}
             title="calendário menstrual"
             description="insira os dados do seu ciclo menstrual
           para acompanhar todos os detalhes!"
-            button="/register"
+            link="/login"
             label="criar meu calendário"
           />
           <LinkList />
