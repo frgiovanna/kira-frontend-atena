@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { TextField, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import * as Styles from "../PeriodForm/styles";
+import { setItem } from '../../utils/storage';
+import api from '../../service/api';
 
 const defaultValues = {
   email: "",
@@ -18,11 +20,29 @@ const LoginForm = () => {
       [name]: value,
     });
   };
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    //TODO - send to Backend
-    console.log(formValues);
-    push("/");
+
+    try {
+      const response = await api.post("/login", {
+        email: formValues.email,
+        password: formValues.password
+      });
+
+      if (response.status > 204) {
+        return;
+      }
+
+      const { user, token } = response.data;
+
+      setItem("token", token);
+      setItem("userId", user.id);
+
+      push("/");
+
+    } catch (error) {
+      console.log(error.message);
+    }
   };
 
   return (
@@ -59,4 +79,5 @@ const LoginForm = () => {
     </form>
   );
 };
+
 export default LoginForm;
