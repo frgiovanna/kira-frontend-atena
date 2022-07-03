@@ -10,6 +10,8 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import WarningRoundedIcon from "@mui/icons-material/WarningRounded";
 import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import WorkspacePremiumRoundedIcon from "@mui/icons-material/WorkspacePremiumRounded";
+import { getItem } from "../utils/storage";
+import api from '../service/api';
 
 export const Container = styled.div`
   width: 400px;
@@ -19,11 +21,41 @@ export const Container = styled.div`
 `;
 
 export default function Home() {
+  const [userToken, setUserToken] = React.useState('');
   const [openDialog, setOpenDialog] = React.useState(true);
-  const isLogged = true;
+  const isLogged = userToken ? true : false;
+
+  const [totalPoints, setTotalPoints] = React.useState('');
+
+  React.useEffect(() => {
+    const token = getItem('token');
+    setUserToken(token);
+    handleTotalPoints();
+
+  }, []);
 
   const handleClose = () => {
     setOpenDialog(false);
+  };
+
+  const handleTotalPoints = async () => {
+    try {
+      const response = await api.get("/points",
+        {
+          headers: {
+            Authorization: `Bearer ${userToken}`
+          }
+        });
+
+      if (response.status > 204) {
+        return;
+      }
+
+      setTotalPoints(response.data.total);
+
+    } catch (error) {
+      console.log(error.message);
+    }
   };
 
   if (!isLogged) {
@@ -83,7 +115,7 @@ export default function Home() {
           label="saiba mais"
           footer={{
             firstTitle: "Sua pontuação atual",
-            firstContent: "200 pontos",
+            firstContent: `${totalPoints} pontos`,
             secondTitle: "Você tem pontos que expiram em",
             secondContent: "19 dias",
           }}
